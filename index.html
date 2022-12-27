@@ -4,6 +4,10 @@
     <title>tonyzzp</title>
   </head>
   <body>
+    <div id = "pages">
+    </div>
+    <hr/>
+    
     <h1><a href="https://tonyzzp.github.io/wangdoc_es6/">es6</a></h1>
     <h1><a href="https://tonyzzp.github.io/wangdoc_html/">html</a></h1>
     <h1><a href="https://tonyzzp.github.io/wangdoc_webapi/">webapi</a></h1>
@@ -12,4 +16,13 @@
     <h1><a href="https://tonyzzp.github.io/wangdoc_bash/">bash</a></h1>
     <h1><a href="https://tonyzzp.github.io/wangdoc_clang/">clang</a></h1>
   </body>
+  <script>
+    let pages = ["es6", "html", "webapi", "ssh", "javascript", "bash", "clang"]
+    let parent = document.body.getElementById("pages")
+    for(let page of pages){
+      let div = document.createElement("div")
+      parent.append(div)
+      div.outerHTML = `<h1><a href="https://tonyzzp.github.io/wangdoc_%s">%s</a></h1>`
+    }
+  </script>
 </html>
