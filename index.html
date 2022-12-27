@@ -4,10 +4,16 @@
     <title>tonyzzp</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #pages {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>教程</h1>
     <div id = "pages">
+      <h1>教程</h1>
+      <hr/>
     </div>
   </body>
   <script>
@@ -16,7 +22,7 @@
     for(let page of pages){
       let div = document.createElement("div")
       parent.append(div)
-      div.outerHTML = `<h1><a href="https://tonyzzp.github.io/wangdoc_${page}">${page}</a></h1>`
+      div.outerHTML = `<h2><a href="https://tonyzzp.github.io/wangdoc_${page}">${page}</a></h2>`
     }
   </script>
 </html>
